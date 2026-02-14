@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosso Amor</title>
+
+    <link rel="stylesheet" href="start_style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ÁUDIO ÚNICO -->
+    <audio id="musica" src="musica/sonho.mp3" loop></audio>
+
+    <!-- TELA INICIAL -->
+    <div id="tela-inicial" class="container">
+        <h1>Uma Página Feita Para Nós</h1>
+        <p>Clique abaixo para ver nossa história e ouvir nossa música.</p>
+
+        <button class="botao-principal" id="entrar">
+            Clique Aqui
+        </button>
+
+        <p class="nota">Com amor, Carrapatinho ❤️</p>
+    </div>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <div id="conteudo" style="display:none;">
+
+        <p id="data-inicio" style="display:none;">2025-12-11</p>
+        <p id="data-casamento" style="display:none;">2025-12-11</p>
+
+        <main id="main-content">
+
+            <div class="card-musica">
+                <!-- seu spotify aqui -->
+                <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/5B5AyKmjN4cieujx8XrbGH?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"></iframe>
+            </div>
+
+            <!-- resto do seu conteúdo normal aqui -->
+            <div class="slideshow-container">
+
+                <div class="slide fade"><img src="img/imagem1.png" alt="Momento 1"></div>
+
+                <div class="slide fade"><img src="img/imagem2.png" alt="Momento 2"></div>
+
+                <div class="slide fade"><img src="img/imagem3.png" alt="Momento 3"></div>
+
+                <div class="slide fade"><img src="img/imagem3.png" alt="Momento 3"></div>
+
+                <div class="slide fade"><img src="img/imagem4.png" alt="Momento 4"></div>
+
+                <div class="slide fade"><img src="img/imagem5.png" alt="Momento 5"></div>
+
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+
+                <a class="next" onclick="plusSlides(1)">❯</a>
+
+            </div>
+
+
+
+            <div class="progresso-aniversario">
+
+                <p id="progresso-texto">Carregando...</p>
+
+                <div class="barra-externa">
+
+                    <div id="barra-interna" class="barra-interna"></div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="contador-detalhado">
+
+                <p id="contador-titulo">Nós nos amamos há:</p>
+
+                <p id="tempo-total">Calculando tempo...</p>
+
+            </div>
+
+
+
+            <div class="mensagem-rodape">
+
+                <p id="mensagem-principal">Nossa união é a maior prova do nosso amor. Que venham muitos anos de felicidade, meu amor!</p>
+
+            </div>
+
+
+
+        </main>
+
+        <div id="coracao-explosao">❤️</div>
+        <div class="coracoes"></div>
+
+    </div>
+
+    <script>
+        document.getElementById("entrar").addEventListener("click", function() {
+
+            const musica = document.getElementById("musica");
+            musica.volume = 0.15;
+            musica.play();
+
+            document.getElementById("tela-inicial").style.display = "none";
+            document.getElementById("conteudo").style.display = "block";
+        });
+    </script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

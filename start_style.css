@@ -1,0 +1,81 @@
+/* start_style.css */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(-45deg, #0d001a, #2a003a, #121212);
+    background-size: 400% 400%;
+    animation: gradient-anim 15s ease infinite;
+    color: white;
+}
+
+@keyframes gradient-anim {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container {
+    background: rgba(30, 30, 30, 0.85);
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 0 40px rgba(255, 64, 129, 0.5);
+    max-width: 90%;
+}
+
+h1 {
+    font-size: 2.2em;
+    color: #ff4081;
+    margin-bottom: 10px;
+    animation: pulse-text 2s infinite alternate;
+}
+
+@keyframes pulse-text {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.05);
+    }
+}
+
+p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+
+.botao-principal {
+    display: inline-block;
+    padding: 15px 35px;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    background-color: #ff4081;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.botao-principal:hover {
+    background-color: #e6005c;
+    transform: translateY(-3px);
+}
+
+.nota {
+    margin-top: 25px;
+    font-style: italic;
+    color: #aaaaaa;
+    font-size: 0.9em;
+}
